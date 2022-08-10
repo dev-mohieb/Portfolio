@@ -423,6 +423,7 @@ h1, p {
         font-size: 1.5rem;
         padding: .6rem 1.5rem;
         width: 10px;
+        height: 40px;
         margin: auto;
         border-radius: 5px;
     }
