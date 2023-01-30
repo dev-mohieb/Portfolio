@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohieb's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fe6bf42745.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav class="nav-bar">
-        <ul>
-            <li class="nav-item"><a href="#home">HOME</a></li>
-            <li class="nav-item"><a href="#about">PROJECTS</a></li>
-            <li class="nav-item"><a href="#contact">CONTACT</a></li>
-        </ul>
-        <div><a href="mailto:dev.mohieb@gmail.com"><i class="fa-solid fa-square-envelope"></i></a></div>
-    </nav>
-        <div id="home">
-            <header>
-                <div class="header">
-                    <p>Hey, I am</p>
-                    <h1>Muheeb<span class="bar"></span></h1>
-                    <p>a <em>Web Developer</em></p>
-                </div>
-            </header>
-            <div class="description shadow">
-                <p>I'm a <b>Diligent</b>, <b>Hard-working</b>, highly <b>Motivated</b> person. I do <b>HTML</b> and <b>CSS</b>, and I'm eager to start learning <b>JavaScript</b> soon. This portfolio showcases my abilities and my style.</p>
-            </div>
-            <div class="scroll-down">
-                <p>Scroll Down</p>
-                <i class="fa-solid fa-arrow-down"></i>
-            </div>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fe6bf42745.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <section class="nav-btns">
+          <a class="nav-btn" href="#home">HOME</a>
+          <a class="nav-btn" href="#about">PROJECTS</a>
+          <a class="nav-btn" href="#contact">CONTACT</a>
+        </section>
+        <div>
+          <a class="nav-btn mail" href="mailto:dev.mohieb@gmail.com"
+            ><i class="fa-solid fa-square-envelope"></i
+          ></a>
         </div>
-        <div id="about">
-            <h1>Here are some of my projects</h1>
-            <div class="projects">
-                <figure>
-                    <a target="_blank" href="https://mohieb-cafe.netlify.app/"><img src="1.PNG" alt="Cafe Menu"></a>
-                    <figcaption class="shadow">Cafe Menu</figcaption>
-                </figure>
-                <figure>
-                    <a target="_blank" href="https://mohieb-survey.netlify.app/"><img src="2.PNG" alt="Survey Form"></a>
-                    <figcaption class="shadow">Survey Form</figcaption>
-                </figure>
-                <figure>
-                    <a target="_blank" href="https://mohieb-tribute.netlify.app/"><img src="3.PNG" alt="Tribute Page"></a>
-                    <figcaption class="shadow">Tribute Page</figcaption>
-                </figure>
-                <figure>
-                    <a target="_blank" href="https://mohieb-landingpage.netlify.app/"><img src="4.PNG" alt="Landing Page"></a>
-                    <figcaption class="shadow">Landing Page</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div id="contact">
-            <div class="heading2">
-                <h1>Let's work together</h1>
-                <p>How do you take your coffee?</p>
-            </div>
-            <div class="social-icons">
-                <a target="_blank" href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a target="_blank" href="https://github.com/dev-mohieb"><i class="fa-brands fa-square-github"></i> GitHub</a>
-                <a target="_blank" href="#"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
-            </div>
-        </div>
-</body>
+      </nav>
+    </header>
+
+    <section id="home">
+      <section class="header">
+        <p>Hey, I am</p>
+        <h1>Muheeb<span class="bar"></span></h1>
+        <p>a <em>Frontend Developer</em></p>
+      </section>
+      <section class="description shadow">
+        <p>
+          I'm always striving to be better through consistent learning and
+          keeping up-to-date with all the new technologies in the field of
+          software and web development.
+        </p>
+      </section>
+      <div class="scroll-down">
+        <p>Scroll Down</p>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+    </section>
+    
+    <section id="about">
+      <h1>Here are some of my projects</h1>
+      <section class="projects">
+        <article class="project">
+          <figure>
+            <a target="_blank" href="https://mohieb-cafe.netlify.app/"
+              ><img src="1.PNG" alt="Cafe Menu"
+            /></a>
+            <figcaption class="shadow">Cafe Menu</figcaption>
+          </figure>
+        </article>
+      </section>
+    </section>
+    <section id="contact">
+      <div class="heading2">
+        <h1>Let's work together</h1>
+        <p>How do you take your coffee?</p>
+      </div>
+      <section class="social-icons">
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/mohieb">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a target="_blank" rel="noopener" href="https://github.com/dev-mohieb">
+            <i class="fa-brands fa-square-github"></i> GitHub</a>
+        <a target="_blank" rel="noopener" href="https://twitter.com/mohiebFE">
+            <i class="fa-brands fa-square-twitter"></i> Twitter</a>
+      </section>
+    </section>
+  </body>
 </html>

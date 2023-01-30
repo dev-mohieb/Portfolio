@@ -8,11 +8,11 @@
     --background-color: #f1f1f1;
 }
 html {
-    font-family: 'League Spartan', sans-serif;
     scroll-behavior: smooth;
 }
 body {
     background-color: var(--background-color);
+    font-family: 'League Spartan', sans-serif;
 }
 h1, p {
     color: var(--text-color);
@@ -28,67 +28,50 @@ h1, p {
     height: 100vh;
     width: 130px;
     text-align: center;
-    background-color: var(--text-color);
+    background: var(--text-color);
     z-index: 999;
     overflow: hidden;
 }
-.nav-item {
-    list-style-type: none;
-    margin-bottom: 2rem;
+.nav-btn {
+    display: block;
     font-size: 1.5rem;
     font-weight: 300;
-}
-.nav-item a {
     text-decoration: none;
     color: var(--background-color);
     padding: 1rem 0;
-    display: flex;
-    justify-content: center;
 }
-.nav-item a:hover {
+.nav-btn:hover {
     cursor: pointer;
     color: var(--text-color);
-    background-color: var(--background-color);
-    transition: all ease .2s;
+    background: var(--background-color);
+    transition: color ease .2s, background ease .2s;
 }
 
-.nav-bar div a {
-    color: var(--background-color);
+.mail {
     font-size: 4rem;
     padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     margin: auto;
     border-radius: 5px;
-    text-decoration: none;
-}
-
-.nav-bar div a:hover {
-    cursor: pointer;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    transition: all ease .2s;
 }
 /*NAVIGATION BAR: END*/
 
 /*HOME: START*/
 #home {
+    width: calc(100vw - 130px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
 }
+.header, .description {
+    margin: auto;
+}
 .header {
     width: 365px;
-    height: 50vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
 }
 .header p:first-child {
     font-size: 2rem;
@@ -119,7 +102,7 @@ h1, p {
     left: 4rem;
     width: 0px;
     height: 2px;
-    background-color: var(--text-color);
+    background: var(--text-color);
     margin: auto;
     animation: bar 1s ease;
     animation-fill-mode: forwards;
@@ -142,14 +125,12 @@ h1, p {
     background-color: var(--background-color);
     border: 2px solid var(--text-color);
     max-width: 500px;
-    margin: 4rem 0;
-    margin-bottom: 6rem;
     padding: 1rem;
-    position: relative;
 }
 .description p {
     color: var(--text-color);
     line-height: 1.1rem;
+    font-size: 1.1rem;
 }
 .scroll-down {
     position: absolute;
