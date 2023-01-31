@@ -235,14 +235,14 @@ h2, p {
 }
 
 .container figure {
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .container figure img {
+    border: 2px solid var(--text-color);
     width: 100%;
     object-fit: cover;
     transition: transform ease .4s;
-
 }
 
 .container figure figcaption {
