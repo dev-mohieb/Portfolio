@@ -93,7 +93,7 @@ h2, p {
     margin: auto;
 }
 .about-heading {
-    width: 365px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
 }
@@ -101,24 +101,25 @@ h2, p {
 .name-paran {
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 2rem auto;
     text-align: center;
     position: relative;
     width: 100%;
+    color: var(--text-color);
 }
 .name-paran::before {
     content: "<";
     font-weight: 200;
     position: absolute;
-    left: 1rem;
+    left: -8px;
     font-size: 1.5em;
 }
 .name-paran::after {
-    content: "/>";
+    content: ">";
     font-weight: 200;
     position: absolute;
-    right: -.5rem;
+    right: -8px;
     font-size: 1.5em;
 }
 
@@ -176,7 +177,7 @@ h2, p {
         height: 2px;
     }
     100% {
-        width: 65%;
+        width: 75%;
     }
 }
 
@@ -228,7 +229,7 @@ h2, p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 2rem;
     margin: 0 auto;
 }
@@ -304,237 +305,37 @@ h2, p {
 
 /*MISC: END*/
 
+.menu-btn {
+    display: none;
+}
 /*MEDIA: START*/
-@media (max-width: 936px) {
-    .social-icons {
-        width: 100%;
-    }
-    .social-icons i, .social-icons a {
-        font-size: 1.4rem;
-        color: var(--text-color);
-        margin-left: 1rem;
-        transition: transform .3s ease-out;
-        text-decoration: none;
-    }
-    .container figure img {
-        width: 30vw;
-    }
-}
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     #about, #projects, #contact {
-        width: calc(100vw - 100px);
+        width: 100%;
+        padding-top: 60px;
     }
     .nav-bar {
-        width: 100px;
-    }
-    .nav-item {
-        font-size: 1.2rem;
-        font-weight: 300;
-    }    
-    .nav-bar div a {
-        font-size: 3rem;
-        width: 80px;
-        height: 100px;
-    }
-    
-    #projects h1 {
-        margin-top: 0;
-        font-size: 3rem;
-    }
-    #projects {
-        min-height: 100vh;
-    }
-    .container {
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0;
-    }
-    .container figure {
-        margin-bottom: 2rem;
-        
-    }
-    .container figure img:hover {
-        transform: scale(1.4);
-        object-fit: fill;
-    }
-
-    #contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #contact h1 {
-        font-size: 3.5rem;
-    }
-    #contact p {
-        font-size: 1.7rem;
-        font-weight: 300;
-    }
-    .social-icons {
-        width: 100%;
-    }
-    .social-icons i, .social-icons a {
-        font-size: 1.2rem;
-        color: var(--text-color);
-        margin-left: .5rem;
-        transition: transform .3s ease-out;
-        text-decoration: none;
-        margin-right: 0;
-    }
-    .social-icons a:hover {
-        transform: translateY(1rem);
-    }
-
-}
-
-@media (max-width: 626px) {
-    .social-icons i, .social-icons a {
-        font-size: 1.1rem;
-    }
-}
-@media (max-width:600px) {
-    #about, #projects, #contact {
-        width: 100vw;
-        min-height: 100vh;
-        height: auto;
-        padding: 1rem 2rem;
-        overflow: hidden;
-    }
-    .nav-bar {
+        padding: 0 1rem;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 50px;
-        width: 100vw;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        height: 60px;
+        width: 100%;
     }
-    .nav-item {
-        display: inline-block;
-        margin: auto;
-        font-size: 1rem;
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
     }
-    .nav-item a {
-        display: inline-block;
-        padding: .9rem .5rem;
-        border-radius: 5px;
-    }
-    .nav-bar div a {
-        font-size: 1.5rem;
-        padding: .6rem 1.5rem;
-        width: 10px;
-        height: 40px;
-        margin: auto;
-        border-radius: 5px;
-    }
-
-    .header p:first-child {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .header h1 {
-        text-align: center;
-        font-size: 3.3rem;
-        margin: 1rem 0;
-    }
-    .header h1::before {
-        left: 2rem;
-    }
-    .header h1::after {
-        right: 2rem;
-    }
-    .bar {
-        top: 2.9rem;
-        left: 5.5rem;
-    }
-    @keyframes bar {
-        100% {
-            width: 185px;
-        }
-    }
-    .header p:nth-of-type(2) {
-        font-size: 1.5rem;
-    }
-    .description {
-        max-width: 500px;
-        margin: 3rem 0 4rem 0;
-        margin-bottom: 6rem;
-        padding: 1rem;
-    }
-    
-    #projects h1 {
+    .menu-btn-icon {
         font-size: 2rem;
-        margin-top: 3rem;
-        margin-bottom: .5rem;
     }
-    .container {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items:center;
-        flex-wrap: wrap;
-        padding: 0;
-    }
-    .container figure {
-        max-height: 100%;
-        max-width: 100%;
-    }
-    .container figure img {
-        max-width: 300px;
-        width: 200px;
-        height: 80%;
-        margin-bottom: .5rem;
-    }
-    .container figure img:hover {
-        transform: scale(1.3);
-        object-fit: fill;
-    }
-    .container figure figcaption {
-        width: 80%;
-        padding: .5rem 0;   
-        font-size: 1rem;
-        font-weight: 300;
-    }
-
-    #contact {
+    .nav-btns {
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        gap: 1rem;
     }
-    .work-heading {
-        margin-top: 4rem;
+    .mail {
+        font-size: 2em;
+        padding: .1em 0;
     }
-    #contact h1 {
-        font-size: 3rem;
-    }
-    #contact p {
-        font-size: 1.5rem;
-    }
-    .social-icons {
-        margin-top: 4rem;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-    .social-icons i, .social-icons a {
-        font-size: 1.5rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .social-icons a:hover {
-        transform: translateX(1rem);
-    }
-}
-
-@media (max-width: 507px) {
-    .container figure img {
-        width: 65vw;
-        height: 35vw;
-    }
-    
 }
