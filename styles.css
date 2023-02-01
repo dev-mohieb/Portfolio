@@ -19,6 +19,7 @@ html {
 body {
     background-color: var(--light-color);
     font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
 }
 h2, p {
     color: var(--dark-color);
@@ -59,7 +60,8 @@ a {
     color: var(--light-color);
     padding: 1rem 0;
 }
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn:focus {
     cursor: pointer;
     color: var(--dark-color);
     background: var(--light-color);
@@ -67,11 +69,13 @@ a {
 }
 
 .mail {
-    font-size: 4rem;
-    padding: 2rem 1rem;
     width: 100px;
     margin: auto;
     border-radius: 5px;
+}
+.mail i {
+    font-size: 4rem;
+    padding: 1rem;
 }
 /*NAVIGATION BAR: END*/
 
@@ -213,14 +217,37 @@ a {
 /*projects: START*/
 
 /* Typography */
-#projects h2 {
-    text-align: center;
-}
 #projects {
+    text-align: center;
     font-size: var(--big-size);
 }
 
 /* Links */
+.git-live {
+    display: flex;
+    top: 0;
+    right: 0;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    justify-content: flex-end;
+    gap: 1rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(3, 3, 3, 0.7),
+        rgba(34, 34, 34, 0));
+}
+
+.caption, .git-live {
+    width: 100%;
+    font-size: 2rem;
+    opacity: 0;
+    transition: all .2s ease;
+    position: absolute;
+}
+
+.git-live i {
+    transition: color .2s ease;
+    color: var(--dark-color);
+}
 
 
 /* Layout */
@@ -244,9 +271,7 @@ a {
     position: relative;
     transition: opacity .2s ease;
 }
-.project:hover :is(.git-live, .caption) {
-    opacity: 100;
-}
+
 .project img {
     border: 2px solid var(--dark-color);
     width: 100%;
@@ -268,36 +293,15 @@ a {
         rgba(34, 34, 34, 0));
     color: var(--light-color);
 }
-.caption, .git-live {
-    width: 100%;
-    font-size: 2rem;
-    opacity: 0;
-    transition: all .2s ease;
-    position: absolute;
-}
 
-.git-live {
-    display: flex;
-    top: 0;
-    right: 0;
-    padding: 1.5rem 1rem 1.5rem 1rem;
-    justify-content: flex-end;
-    gap: 1rem;
-    background: linear-gradient(
-        to bottom,
-        rgba(3, 3, 3, 0.7),
-        rgba(34, 34, 34, 0));
-}
-
-.git-live i {
-    transition: color .2s ease;
-    color: var(--dark-color);
-}
+/* psuedo */
 .git-live i:hover {
     color: var(--light-color);
 }
 
-/*projects: END*/
+.project:hover :is(.git-live, .caption) {
+    opacity: 100;
+}
 
 /*CONTACT: START*/
 #contact {
@@ -308,10 +312,6 @@ a {
 }
 .work-heading {
     width: 100%;
-}
-#contact h2 {
-    text-align: center;
-    margin: auto;
 }
 #contact :is(a, i, p) {
     font-size: 2rem;
@@ -336,19 +336,19 @@ a {
 .social-icons a:active {
     transform: scale(0.9);
 }
-/*CONTACT: END*/
 
 /*MISC: START*/
 .shadow {
     box-shadow: 5px 5px 0px 0px var(--dark-color);
 }
 
-/*MISC: END*/
 .menu-btn {
     display: none;
 }
+
 /*MEDIA: START*/
-@media (max-width: 650px) {
+@media (max-width: 600px) {
+    
     #about, #projects, #contact {
         width: 100%;
         padding-top: 60px;
@@ -360,20 +360,42 @@ a {
         justify-content: space-between;
         height: 60px;
         width: 100%;
+        overflow: visible;
     }
     .menu-btn {
         display: block;
-        background: none;
+        background: var(--light-color);
+        color: var(--dark-color);
         border: none;
+        padding: .25rem .5rem;
+        border-radius: 5px;
     }
     .menu-btn-icon, .mail {
         font-size: 2rem;
     }
     .nav-btns {
-        display: flex;
-        gap: 1rem;
+        display: none;
+        flex-direction: column;
+        border-top: 1px solid var(--light-color);
+        background: var(--dark-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
     }
     .mail {
-        padding: .1rem 0;
+        width: 100%;
+    }
+    .mail i {
+        font-size: 2.3rem;
+        padding: .5rem 1rem;
+        display: block;
+    }
+    .mail i:hover,
+    .nav-btn:hover {
+        cursor: default;
+        color: var(--dark-color);
+        background: var(--light-color);
+        transition: color ease .2s, background ease .2s;
     }
 }
