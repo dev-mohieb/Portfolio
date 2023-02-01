@@ -371,7 +371,7 @@ a {
         border-radius: 5px;
     }
     .nav-btns {
-        display: flex;
+        display: none;
         flex-direction: column;
         border-top: 1px solid var(--light-color);
         background: var(--dark-color);
