@@ -42,3 +42,14 @@ function renderProjects(data) {
 }
 
 renderProjects(projects);
+const navBtns = document.querySelector('.nav-btns');
+
+function toggle() {
+    if (navBtns.style.display === 'none') {
+      navBtns.style.cssText = `display: flex;
+                               opacity: 100;`;
+  } else if (navBtns.style.display = 'flex') {
+      navBtns.style.cssText = `display: none;
+                               opacity: 0;`;
+  }
+};
