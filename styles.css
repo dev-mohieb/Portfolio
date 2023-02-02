@@ -416,13 +416,13 @@ a {
     }
     .git-live {
         cursor: default;
-        padding: .5rem;
+        padding: 1rem;
     }
     .git-live i:hover {
         cursor: default;
     }
     .caption {
         font-size: 1.5rem;
-        padding: .5rem;
+        padding: 1rem;
     }
 }
