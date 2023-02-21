@@ -61,9 +61,9 @@ function toggle() {
 };
 
 const navItems = document.querySelectorAll('.nav-btns a');
-navItems.forEach(item => {
+for (let item of navItems) {
   item.addEventListener('click', () => {
   navBtns.style.cssText: = `display: none;
                             opacity: 0;`;
   })
-})
+}
