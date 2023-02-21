@@ -59,3 +59,11 @@ function toggle() {
                                opacity: 0;`;
   }
 };
+
+const navItems = document.querySelectorAll('.nav-btns a');
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+  navBtns.style.cssText: = `display: none;
+                            opacity: 0;`;
+  })
+})
