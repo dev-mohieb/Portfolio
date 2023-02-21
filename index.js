@@ -2,6 +2,12 @@ const projectsContainer = document.querySelector(".container");
 
 const projects = [
   {
+    projectLink: "https://mohieb-sunnyside.netlify.app",
+    projectSrc: "https://github.com/dev-mohieb/sunnyside-landingpage",
+    projectName: "Sunnyside",
+    projectImg: "images/Sunnyside.png",
+  },
+  {
     projectLink: "https://mohieb-instagram.netlify.app/",
     projectSrc: "https://github.com/dev-mohieb/instagram-clone",
     projectName: "Instagram Clone",
