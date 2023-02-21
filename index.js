@@ -60,7 +60,7 @@ function toggle() {
   }
 };
 
-const navItems = document.querySelectorAll('.nav-btns a');
+const navItems = document.querySelectorAll('.nav-btn');
 for (let item of navItems) {
   item.addEventListener('click', () => {
   navBtns.style.cssText: = `display: none;
