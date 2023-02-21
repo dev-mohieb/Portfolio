@@ -60,10 +60,3 @@ function toggle() {
   }
 };
 
-const navItems = document.querySelectorAll('.nav-btn');
-for (let item of navItems) {
-  item.addEventListener('click', () => {
-  navBtns.style.cssText: = `display: none;
-                            opacity: 0;`;
-  })
-}
